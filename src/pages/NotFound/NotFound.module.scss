@@ -1,0 +1,38 @@
+.wrapper {
+  text-align: center;
+}
+
+.title {
+  font-size: 96px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.link:link,
+.link:visited {
+  color: #ff6161;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 800px) {
+  .title {
+    font-size: 288px;
+    line-height: 411px;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  .link:link,
+  .link:visited {
+    font-size: 18px;
+  }
+}

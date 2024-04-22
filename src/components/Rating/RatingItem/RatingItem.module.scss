@@ -1,0 +1,58 @@
+.wrapper {
+  --star-size: 15px;
+  --star-gap: 4px;
+
+  display: grid;
+  gap: var(--star-gap);
+  grid-template-columns: 1em auto;
+}
+
+.input {
+  appearance: none;
+  background-image: url('../../../assets/images/staroff.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: grid;
+  height: var(--star-size);
+  margin: 0;
+  place-content: center;
+  width: var(--star-size);
+}
+
+.text {
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.input::before {
+  background-image: url('../../../assets/images/staron.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  height: var(--star-size);
+  opacity: 0;
+  width: var(--star-size);
+}
+
+.input[data-visualycheck='true']::before {
+  opacity: 1;
+}
+
+.input:focus-visible {
+  outline: max(0.125rem, 0.15rem) solid currentColor;
+  outline-offset: max(0.125rem, 0.15rem);
+}
+
+@media screen and (min-width: 800px) {
+  .wrapper {
+    --star-size: 30px;
+    --star-gap: 20px;
+  }
+}

@@ -1,0 +1,53 @@
+.wrapper {
+  --padding-inline: 32px;
+  --padding-block: 16px;
+  --min-height: 111px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  display: grid;
+  min-height: var(--min-height);
+  overflow: hidden;
+  padding: var(--padding-block) var(--padding-inline);
+  position: relative;
+  width: 100%;
+}
+
+.wrapper::before {
+  background-blend-mode: darken;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.wrapper > * {
+  align-self: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  justify-self: flex-start;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+@media screen and (min-width: 800px) {
+  .wrapper {
+    --padding-inline: 32px;
+    --padding-block: 50px;
+    --min-height: 223px;
+  }
+
+  .wrapper > * {
+    font-size: 48px;
+    justify-self: center;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,133 @@
+.wrapper {
+  align-content: start;
+  align-items: start;
+  display: grid;
+  grid-template-areas:
+    'carousel carousel'
+    'title title'
+    'location location'
+    'tags tags'
+    'rating host'
+    'info info';
+  justify-content: stretch;
+  justify-items: start;
+}
+
+.carousel {
+  grid-area: carousel;
+  justify-self: stretch;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  grid-area: title;
+  line-height: 1.625rem;
+  margin: 0.9375rem 0 0;
+}
+
+.location {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  grid-area: location;
+  line-height: 1.25rem;
+  margin: 0.625rem 0 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  grid-area: tags;
+  list-style: none;
+  margin: 0.625rem 0;
+  padding: 0;
+
+  li {
+    background-color: #ff6161;
+    border-radius: 0.3125rem;
+    color: #fff;
+    display: grid;
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 0.9375rem;
+    margin: 0;
+    min-height: 1.25rem;
+    min-width: 5rem;
+    padding: 0.3125rem 0.9375rem;
+    place-content: center;
+    text-align: center;
+  }
+}
+
+.rating {
+  align-self: center;
+  grid-area: rating;
+  margin: 0.9375rem 0;
+}
+
+.host {
+  align-self: center;
+  grid-area: host;
+  justify-self: end;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  grid-area: info;
+  grid-gap: 1.25rem;
+  margin-top: 0.625rem;
+}
+
+.equipments {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 800px) {
+  .wrapper {
+    grid-template-areas:
+      'carousel carousel carousel carousel'
+      'title title title host'
+      'location location location host'
+      'tags tags tags rating'
+      'info info info info';
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  .location {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .tags {
+    align-self: center;
+
+    li {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .rating {
+    justify-self: end;
+  }
+
+  .host {
+    align-self: start;
+    margin-top: 24px;
+  }
+
+  .info {
+    display: grid;
+    gap: 70px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

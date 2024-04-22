@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #ff6161;
+  font-family: Montserrat, 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+/* ACCESSIBILITY */
+a:focus-visible,
+button:focus-visible {
+  background-color: #ff6161;
+  color: #fff;
+  outline: 2px solid #ff6161;
+  outline-offset: 4px;
+}

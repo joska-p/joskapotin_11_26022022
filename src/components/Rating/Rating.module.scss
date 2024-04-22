@@ -1,0 +1,30 @@
+.wrapper {
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  position: relative;
+
+  .legend {
+    border: 0 !important;
+    clip: rect(0, 0, 0, 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+  }
+
+  label:first-of-type {
+    left: -1.5rem;
+    position: absolute;
+    position: absolute;
+
+    input,
+    input::before {
+      background-image: none;
+    }
+  }
+}
